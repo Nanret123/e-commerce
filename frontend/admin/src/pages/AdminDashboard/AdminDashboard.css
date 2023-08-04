@@ -1,0 +1,53 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+/*.app{
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  background: #e5e7eb;
+}*/
+
+.main{
+ position: relative;
+  background: #ebe9e9;
+   width: 100%;
+  padding: 1rem;
+/*  margin-left: 16rem;*/
+}
+.admin-body{
+  width: 100%;
+  background: #e5e7eb;
+  position: relative;
+  display: flex;
+}
+.main-active{
+      margin-left: 16rem;
+      padding: 1rem;
+      position: relative;
+  background: #ebe9e9;
+   width: 100%;
+
+ }
+ .sub-main{
+  margin-left: 16rem;
+ }
+ 
+@media screen and (max-width: 769px){
+  .main{
+    width: 100%;
+ margin-left: 0px;
+    display: inline-block;
+  }
+  .main-active{
+      margin-left: 17rem;
+
+  }
+  .sub-main{
+    margin-left: 0;
+  }
+  
+}

@@ -1,0 +1,90 @@
+
+.header-first{
+display: flex;
+align-items: center;
+gap: 1rem;
+}
+.header-first .bars{
+	color: #2b2b2b;
+	font-size: 20px;
+	cursor: pointer;
+	display: none;
+}
+.header-wrapper img{
+	width:50px;
+   height: 50px;
+   object-fit: cover;
+   cursor: pointer;
+   border-radius: 50%;
+}
+.header-wrapper{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	background: #fff;
+	border-radius: 10px;
+	padding: 10px 2rem;
+	margin-bottom: 1rem;
+	position: fixed;
+	width: 77%;
+	z-index: 2;
+	margin-left: 16.2rem;
+}
+.header-wrapper.main{
+	background-color: #fff;
+	width: 73%;
+}
+.header-title{
+	color: rgba(113, 99, 186, 255);
+}
+.user-info{
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+.search-box{
+	background: rgb(237, 237, 237);
+	border-radius: 15px;
+	color: rgba(113, 99, 186, 255);
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	padding: 4px 12px;
+}
+
+.search-box input{
+	background: transparent;
+	border: none;
+	outline: none;
+	padding: 10px;
+}
+.search-box .search{
+	font-size: 1.2rem;
+	cursor: pointer;
+	transition: all 0.5s ease-out;
+}
+
+.search-box .search:hover{
+transform: scale(1.2);
+}
+
+@media screen and (max-width: 769px){
+	.header-wrapper .main{
+	margin-left: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	background-color: #fff;
+	border-radius: 10px;
+	padding: 10px 2rem;
+	margin-bottom: 1rem;
+	position: fixed;
+	width: 50%;
+	z-index: 2;
+	}
+	.header-first .bars{
+		display: initial;
+	}
+}

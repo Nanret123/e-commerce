@@ -1,0 +1,53 @@
+.news-container{
+	height: 60vh;
+	background-color: #fcf5f5;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.news-container h1{
+	font-size: 70px;
+	margin-bottom: 20px;
+}
+
+.news-desc{
+	font-size: 24px;
+	font-weight: 300;
+	margin-bottom: 20px;
+}
+
+.input-container{
+	width: 50%;
+	border: 1px solid lightgray;
+	height: 40px;
+	background-color: white;
+	display: flex;
+	justify-content: space-between;
+
+
+}
+
+.input-container button{
+	flex: 1;
+	border: none;
+	background-color: teal;
+	color: white;
+}
+
+.input-container input{
+	border: none;
+	flex: 8;
+	padding-left:20px ;
+	outline: none;
+}
+
+@media (max-width: 768px) {
+	.news-desc{
+		text-align: center;
+	}
+	.input-container{
+		width: 80%;
+	}
+}
