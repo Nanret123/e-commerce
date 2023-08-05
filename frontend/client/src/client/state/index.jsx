@@ -4,9 +4,8 @@ const initialState = {
 	isAuth: false,
 	authLoading: false,
 	error: null,
-  user: null,
-  token: null,
-  posts: [],
+    user: null,
+    token: null,
 };
 
 

@@ -8,11 +8,8 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
 const registerSchema = yup.object().shape({
-  firstName: yup
-    .string()
-    .required("required")
-    .max(15, "must be 15 characters or less"),
-  lastName: yup
+  
+  name: yup
     .string()
     .required("required")
     .max(15, "must be 15 characters or less"),
@@ -50,14 +47,11 @@ const FormPage = () => {
   const isLogin = pageType === "login";
   const isRegister = pageType === "register";
 
-  const handleFormSubmit = async(values, onSubmitProps) => {
-    if(isLogin) await login(values, onSubmitProps);
-    if(isRegister) await register(values, onSubmitProps);
-  };
+  
 
   const register = async (values, onSubmitProps) => {
-    const SignUpResponse = await fetch("http://localhost:3000/auth/signup", {
-      method: "PUT",
+    const SignUpResponse = await fetch("http://localhost:8080/auth/register", {
+      method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(values),
     });
@@ -68,7 +62,7 @@ const FormPage = () => {
   };
 
   const login = async (values, onSubmitProps) => {
-    const loginResponse = await fetch("http://localhost:3000/auth/login", {
+    const loginResponse = await fetch("http://localhost:8080/auth/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(values),
@@ -84,6 +78,11 @@ const FormPage = () => {
       );
       navigate("/home");
     }
+  };
+
+  const handleFormSubmit = async(values, onSubmitProps) => {
+    if(isLogin) await login(values, onSubmitProps);
+    if(isRegister) await register(values, onSubmitProps);
   };
 
   return (
@@ -110,27 +109,10 @@ const FormPage = () => {
               <div className="form-wrapper">
                 {isRegister && (
                   <>
+                    
                     <input
                       type="text"
-                      label="First Name"
-                      placeholder="First Name"
-                      onBlur={handleBlur}
-                      onChange={handleChange}
-                      value={values.firstName}
-                      name="firstName"
-                      className={`${errors.firstName && touched.firstName
-                        ? "input-error"
-                        : ""
-                        }`}
-                    />
-
-                    {errors.firstName && touched.firstName ? (
-                      <div>{errors.firstName}</div>
-                    ) : null}
-
-                    <input
-                      type="text"
-                      label="Last Name"
+                      label="Name"
                       placeholder="Last Name"
                       onBlur={handleBlur}
                       onChange={handleChange}
