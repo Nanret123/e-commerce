@@ -84,7 +84,9 @@ li {
     box-shadow: rgba(50, 50, 93, 0.23) 0px 50px 100px -20px,
       rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
     transition: all 0.5s ease-in-out;
-    background-color: white;
+    background-color: black;
+    color: white;
+    z-index: 1000;
   }
   ul li {
     /* padding: 32px;
@@ -103,5 +105,6 @@ li {
     font-size: 24px;
     cursor: pointer;
     display: block;
+    border: 0;
   }
 }
