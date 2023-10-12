@@ -1,11 +1,25 @@
 import React from "react";
 import "./ProductPage.css";
-import Navigation from "../../Components/Navigation/Navigation.jsx";
 import { IoIosRemove } from "react-icons/io";
 import { AiOutlinePlus } from "react-icons/ai";
 import { product } from "../../data.js";
 
 const ProductPage = () => {
+	const token = useSelector((state) => state.auth.token);
+  const user = useSelector((state) => state.auth.user);
+
+    const addToCart = async () => {
+    const products = await fetch("http://localhost:8080/add-to-cart", {
+      method: "GET",
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+    const data = await products.json();
+    dispatch(setItems({ items: data }));
+    
+  };
+
 	return (
 		<div>
 			{product.map((item) => (

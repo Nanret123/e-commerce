@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
+import { setLogout } from "../../state";
 import "./Navigation.css";
 import { FaBars } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
@@ -10,10 +11,12 @@ const Navigation = () => {
   const [Mobile, setMobile] = useState(false);
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const user = Boolean(useSelector((state) => state.token));
-console.log(user);
+  const user = Boolean(useSelector((state) => state.auth.token));
 
-  //const cart = useSelector((state) => state.cart.cart);
+   const handleLogout = () => {
+    dispatch(setLogout());
+   }
+
 
   return (
     <div className="container">
@@ -27,19 +30,15 @@ console.log(user);
             className={Mobile ? "nav-links-mobile" : "nav-links"}
             onClick={() => setMobile(false)}
           >
-          
-          {user && user.isAdmin && (
+          {!user && (
             <>
               <li>
-                <Link to="/admin">Dashboard</Link>
+                <Link to="/login">Login</Link>
               </li>
-              <li>
-                <Link to="/new-product">Create Product</Link>
-              </li>
+              
             </>
             )}
-
-            {user && !user.isAdmin && (
+           {user && !user.isAdmin && (
             <>
               <li>
                 <Link to="/cart">Cart</Link>
@@ -47,16 +46,33 @@ console.log(user);
               <li>
                 <Link to="/orders">My Orders</Link>
               </li>
-              <Link>
-                <button>Logout</button>
-              </Link>
+              
             </>
             )}
+          
+          {user && !user.isAdmin && (
+            <>
+              <li>
+                <Link to="/admin">Dashboard</Link>
+              </li>
+              <li>
+                <Link to="/newProduct">Create Product</Link>
+              </li>
+            </>
+            )} 
+            {user && (
+               
+                <Link>
+                <button onClick={handleLogout}>Logout</button>
+              </Link>
+               
+              )}
+           
           </ul>
         </div>
-        <div>
+        <div className="mobile-menu-icon">
           <button
-            className="mobile-menu-icon"
+            
             onClick={() => setMobile(!Mobile)}
           >
             {Mobile ? <ImCross /> : <FaBars />}

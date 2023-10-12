@@ -1,0 +1,101 @@
+.single-wrapper{
+	display: flex;
+	padding: 2rem;
+	
+}
+
+.single-wrapper .image-container{
+	height: 15%;
+	margin-right: 50px;
+}
+
+.image-container img{
+	width: 100%;
+	object-fit: cover;
+}
+
+.Singleprod-info{
+	width: 50%;
+	padding-top: 30px;
+}
+.Singleprod-info h1{
+	padding:40px 0 20px 0 ;
+}
+.Singleprod-info h4{
+	margin: 1rem 0;
+}
+.Singleprod-info h2{
+	margin-bottom: 0.5rem;
+}
+
+.Singleprod-info select{
+	display: block;
+	padding: 5px 10px;
+	margin-bottom: 10px;
+}
+
+.Singleprod-info input{
+	width: 50px;
+	height: 47px;
+	padding-left: 10px;
+	font-size: 16px;
+	margin-right: 10px;
+}
+.Singleprod-info button{
+	background-color:#00695c;
+	color: #fff;
+	padding: 0.5rem 1rem;
+	outline: none;
+}
+.Singleprod-info .cart-button{
+margin-top: 1rem;
+}
+
+.Singleprod-info button:hover{
+	color: #00695c;
+	background-color: #fff;
+	cursor: pointer;
+}
+
+.Singleprod-info span{
+	line-height: 25px;
+}
+.prod-buttons{
+	display: flex;
+}
+.buttons{
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.format-btn{
+	margin-top: 1rem;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+}
+
+@media screen and (max-width: 768px){
+.single-wrapper{
+	margin-top: 0px;
+	display: flex;
+	flex-direction: column;
+}
+.Singleprod-info h1{
+	padding:0px;
+}
+.Singleprod-info button{
+	font-size: 1rem;
+	
+}
+.Singleprod-info{
+	width: 100%;
+	padding-top: 30px;
+}
+.buttons{
+	display: flex;
+	flex-direction: row;
+}
+}
+

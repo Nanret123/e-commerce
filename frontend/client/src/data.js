@@ -1,3 +1,5 @@
+import loungewear from "/images/loungewear.jpg";
+
 export const sliderItems = [
   {
     id: 1,
@@ -28,7 +30,7 @@ export const categories = [
     title: "SHIRT STYLE!",
     category: "women",
     price: 20.99,
-    img: "./images/item-4.jpeg",
+    img: "/images/item-4.jpeg",
     desc: `Shabby chic keffiyeh neutra snackwave pork belly shoreditch. Prism austin mlkshk truffaut, `,
   },
   {
@@ -36,7 +38,7 @@ export const categories = [
     title: "LOUNGEWEAR LOVE",
     category: "coat",
     price: 20.99,
-    img: "./images/item-4.jpeg",
+    img: "/images/item-4.jpeg",
     desc: `Shabby chic keffiyeh neutra snackwave pork belly shoreditch. Prism austin mlkshk truffaut, `,
   },
   {
@@ -44,7 +46,7 @@ export const categories = [
     title: "LIGHT JACKETS",
     category: "jeans",
     price: 20.99,
-    img: "./images/item-4.jpeg",
+    img: "/images/item-4.jpeg",
     desc: `Shabby chic keffiyeh neutra snackwave pork belly shoreditch. Prism austin mlkshk truffaut, `,
   },
 ];

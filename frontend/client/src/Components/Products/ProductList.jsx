@@ -1,20 +1,22 @@
-import React from 'react';
-import { categories } from "../../data.js";
+import React, { useEffect } from "react";
 import Product from "./Product.jsx";
 import "./ProductList.css";
 
-const ProductList = () => {
-	
-	return (
-		<div className="prodlist-container">
-		 <h2>New Arrivals</h2>
-		  <div className="products">
-		  	{categories.map(item => <Product {...item} key={item.id} />)
-		  }
-		  </div>
-		
-		</div>
-	)
-}
+
+
+const ProductList = ({items}) => {
+  
+
+  return (
+    <div className="prodlist-container">
+      <h2>Our Latest Products</h2>
+      <div className="products">
+        {items.map((item) => (
+          <Product {...item} key={item._id} />
+        ))}
+      </div>
+    </div>
+  );
+};
 
 export default ProductList;

@@ -34,13 +34,18 @@
 .form-wrapper input{
 	width: 90%;
 	padding: 10px;
-	border: 1px solid #dddddd;
+	border: 1px solid #a1a1a1;
 	border-radius: 5px;
 	outline: none;
 	color: black;
 	font-size: 1em;
 
 }
+
+.form-wrapper input:focus{
+	outline-color: #00695c;
+}
+
 
 input.input-error{
 	border-color: red;
@@ -49,14 +54,16 @@ input.input-error{
 .form-btn{
 	margin: 2rem 0;
 	padding: 1rem;
-	background-color: #00D5FA;
+	background-color: #00695c;
 	color: #F6F6F6;
 	outline: none;
 }
 
 .form-btn:hover{
 	cursor: pointer;
-	color: black;
+	color: #00695c;
+	background-color: #F6F6F6;
+
 }
 
 .form-reset{

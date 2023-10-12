@@ -7,29 +7,36 @@ li {
 }
 
 .navbar {
+  background-color:#00695c;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 10vh;
-  box-shadow: rgba(50, 50, 93, 0.23) 0px 30px 30px -20px;
-  padding: 20px 80px;
+  height: 5vh;
+  padding: 30px 0px;
+  width: 100%;
 }
 
 .logo {
+  color: white;
   font-size: 30px;
+   line-height: 80px;
+  padding: 0 50px;
+  font-weight: bold;
+
 }
 
 .nav-links {
+  
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 75%;
+  width: 100%;
 }
 
 .nav-links li {
-  color: black;
+  color: white;
   font-size: 20px;
-  padding: 0 20px;
+  padding: 0 5px;
   /* position: relative; */
   cursor: pointer;
   text-transform: capitalize;
@@ -38,11 +45,13 @@ li {
 .nav-links li a {
   font-size: 1.3rem;
   font-weight: 600;
-  color: black;
+  color: white;
   transition: 0.3s ease-in-out;
 }
 
-.nav-links li a:hover {
+.nav-links li a:hover,
+.nav-links button:hover
+ {
   color: #17cf97;
 }
 
@@ -51,19 +60,21 @@ li {
 }
 
 .nav-links button {
+  color: white;
   margin: 0 10px;
   padding: 10px 20px;
   border: none;
   text-decoration: none;
   font-size: 20px;
   background: none;
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {
   .logo {
     display: flex;
     position: absolute;
-    top: 15px;
+    top: 0px;
     left: 35px;
   }
   .nav-links {
@@ -84,7 +95,7 @@ li {
     box-shadow: rgba(50, 50, 93, 0.23) 0px 50px 100px -20px,
       rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
     transition: all 0.5s ease-in-out;
-    background-color: black;
+    background-color:#00695c;
     color: white;
     z-index: 1000;
   }
@@ -95,16 +106,25 @@ li {
     text-align: center; */
     margin-bottom: 25px;
   }
-  ul button {
-    padding: 32px;
-    width: 100%;
-    transition: all 0.5s ease-in-out;
-    text-align: center;
-  }
-  .mobile-menu-icon {
+  
+  .mobile-menu-icon{
     font-size: 24px;
     cursor: pointer;
     display: block;
     border: 0;
   }
+  button{
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  .nav-links-mobile li {
+  color: white;
+  font-size: 20px;
+  padding: 0 5px;
+  /* position: relative; */
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+
 }

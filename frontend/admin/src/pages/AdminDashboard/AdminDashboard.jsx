@@ -12,7 +12,7 @@ import "./AdminDashboard.css";
 
 const AdminDashboard = () => {
    const [isOpen, setIsOpen] = useState(false);
-console.log(isOpen);
+   
     const activateNav= () => {
         return setIsOpen(!isOpen);
     };
