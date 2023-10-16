@@ -11,7 +11,7 @@ const Modal = ({setModal, id}) => {
 	const token = useSelector((state) => state.auth.token);
 
 	const deleteItem = async () => {
-    const products = await fetch(`http://localhost:8000/product/${id}/delete`, {
+    const products = await fetch(`https://e-commerce-six-pink.vercel.app/product/${id}/delete`, {
       method: "DELETE",
       headers: {
         Authorization: `Bearer ${token}`,

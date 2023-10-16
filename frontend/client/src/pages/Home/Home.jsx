@@ -17,7 +17,7 @@ const Home = () => {
 
   const getItems = async () => {
     try {
-      const products = await fetch("http://localhost:8000/products", {
+      const products = await fetch("https://e-commerce-six-pink.vercel.app/products", {
         method: "GET",
         headers: {
           Authorization: `Bearer ${token}`,

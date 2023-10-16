@@ -29,7 +29,7 @@ const Login = () => {
 
   const handleFormSubmit = async (values, onSubmitProps) => {
     try {
-      const loginResponse = await fetch("http://localhost:8000/auth/login", {
+      const loginResponse = await fetch("https://e-commerce-six-pink.vercel.app/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(values),

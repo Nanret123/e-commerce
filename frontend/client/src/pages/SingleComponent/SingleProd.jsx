@@ -44,7 +44,7 @@ const SingleProd = () => {
   };
 
   const addToCart = async () => {
-    const product = await fetch(`http://localhost:8000/add-to-cart`, {
+    const product = await fetch(`https://e-commerce-six-pink.vercel.app/add-to-cart`, {
       method: "POST",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -71,7 +71,7 @@ const SingleProd = () => {
     <div className="single-prod">
       <div className="single-wrapper">
         <div className="image-container">
-          <img src={`http://localhost:8000/${imagePath}`} alt="product image" />
+          <img src={`https://e-commerce-six-pink.vercel.app/${imagePath}`} alt="product image" />
         </div>
         <div className="Singleprod-info">
           <h1>{title}</h1>
