@@ -24,7 +24,7 @@ const SingleProd = () => {
   };
 
   const getItem = async () => {
-    const product = await fetch(`http://localhost:8080/product/${id}`, {
+    const product = await fetch(`http://localhost:8000/product/${id}`, {
       method: "GET",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -44,7 +44,7 @@ const SingleProd = () => {
   };
 
   const addToCart = async () => {
-    const product = await fetch(`http://localhost:8080/add-to-cart`, {
+    const product = await fetch(`http://localhost:8000/add-to-cart`, {
       method: "POST",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -71,7 +71,7 @@ const SingleProd = () => {
     <div className="single-prod">
       <div className="single-wrapper">
         <div className="image-container">
-          <img src={`http://localhost:8080/${imagePath}`} alt="product image" />
+          <img src={`http://localhost:8000/${imagePath}`} alt="product image" />
         </div>
         <div className="Singleprod-info">
           <h1>{title}</h1>

@@ -1,12 +1,12 @@
 import React from 'react';
-import autumn from "/images/autumn.jpeg";
+import summer from "/images/summer.jpg";
 import "./Hero.css";
 
 const SliderHome = () => {
     return ( 
     	<>
         <main className="main-container">
-			  <img src={autumn} alt="" />
+			  <img src={summer} alt="summer" />
 				<div className="main-text">
 							<h5>Summer Collection</h5>
 							<h1>New Summer <br /> Collection</h1>

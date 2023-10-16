@@ -12,7 +12,7 @@ const Order = () => {
 
   const getOrders = async () => {
     try {
-      const orders = await fetch("http://localhost:8080/orders", {
+      const orders = await fetch("http://localhost:8000/orders", {
         method: "GET",
         headers: {
           Authorization: `Bearer ${token}`,

@@ -9,7 +9,7 @@ const ProductPage = () => {
   const user = useSelector((state) => state.auth.user);
 
     const addToCart = async () => {
-    const products = await fetch("http://localhost:8080/add-to-cart", {
+    const products = await fetch("http://localhost:8000/add-to-cart", {
       method: "GET",
       headers: {
         Authorization: `Bearer ${token}`,

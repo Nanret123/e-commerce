@@ -29,17 +29,12 @@ const Login = () => {
 
   const handleFormSubmit = async (values, onSubmitProps) => {
     try {
-      const loginResponse = await fetch("http://localhost:8080/auth/login", {
+      const loginResponse = await fetch("http://localhost:8000/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(values),
       });
-      if (handleFormSubmit.status == 422) {
-        throw new Error("Validation Failed!");
-      }
-      if (handleFormSubmit.status !== 200 || handleFormSubmit.status !== 201) {
-        throw new Error("Could not authenticate you!");
-      }
+     
       const loggedinUser = await loginResponse.json();
       onSubmitProps.resetForm();
       if (loggedinUser) {
@@ -53,7 +48,6 @@ const Login = () => {
       }
     } catch (error) {
       setError({ error: error });
-      navigate("/error");
     }
   };
 

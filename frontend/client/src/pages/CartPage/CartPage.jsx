@@ -19,7 +19,7 @@ const Cart = () => {
 
   const getCart = async () => {
     try {
-      const products = await fetch("http://localhost:8080/get-cart", {
+      const products = await fetch("http://localhost:8000/get-cart", {
         method: "GET",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -35,7 +35,7 @@ const Cart = () => {
   };
 
   const handleDelete = async (id) => {
-    const product = await fetch(`http://localhost:8080/delete-cart/${id}`, {
+    const product = await fetch(`http://localhost:8000/delete-cart/${id}`, {
       method: "GET",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -47,7 +47,7 @@ const Cart = () => {
   };
 
   const handleSubmit = async () => {
-    const response = await fetch(`http://localhost:8080/checkout-success`, {
+    const response = await fetch(`http://localhost:8000/checkout-success`, {
       method: "GET",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -61,6 +61,12 @@ const Cart = () => {
   useEffect(() => {
     getCart();
   }, [cartItems]);
+
+  {if(cartItems <= 0){
+    return (
+    <div>No Cart Items </div>
+      )
+  }}
 
   return (
     <div className="cart-wrapper">

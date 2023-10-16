@@ -17,7 +17,7 @@ const Home = () => {
 
   const getItems = async () => {
     try {
-      const products = await fetch("http://localhost:8080/products", {
+      const products = await fetch("http://localhost:8000/products", {
         method: "GET",
         headers: {
           Authorization: `Bearer ${token}`,

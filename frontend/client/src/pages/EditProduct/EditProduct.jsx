@@ -51,7 +51,7 @@ const EditProduct = () => {
     formData.append("title", title);
     formData.append("price", price);
 
-    const response = await fetch(`http://localhost:8080/product/${id}`, {
+    const response = await fetch(`http://localhost:8000/product/${id}`, {
       method: "PUT",
       headers: { Authorization: `Bearer ${token}` },
       body: formData,

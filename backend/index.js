@@ -41,12 +41,12 @@ app.use("/images", express.static(path.join(__dirname, "images")));
 app.use("/auth", authRoutes);
 app.use(productsRoutes);
 
-mongoose
-  .connect("mongodb://localhost:27017/shop")
-  .then((result) => {
-    app.listen(8080),
-      () => {
-        console.log("server running");
-      };
-  })
-  .catch((err) => console.log(err));
+const PORT = process.env.PORT || 3000;
+const DB = process.env.DATABASE_URL;
+
+mongoose.connect(DB)
+    .then(result => {
+      app.listen(PORT);
+      console.log("server running");
+    })
+    .catch(err => console.log(err));
