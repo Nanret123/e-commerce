@@ -9,7 +9,7 @@ const ProductPage = () => {
   const user = useSelector((state) => state.auth.user);
 
     const addToCart = async () => {
-    const products = await fetch("https://e-commerce-six-pink.vercel.app/add-to-cart", {
+    const products = await fetch("https://e-commerce-azure-six.vercel.app/add-to-cart", {
       method: "GET",
       headers: {
         Authorization: `Bearer ${token}`,

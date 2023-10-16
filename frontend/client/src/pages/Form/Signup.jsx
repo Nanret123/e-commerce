@@ -33,7 +33,7 @@ const Signup = () => {
   const handleFormSubmit = async (values, onSubmitProps) => {
     try {
       const SignUpResponse = await fetch(
-        "https://e-commerce-six-pink.vercel.app/auth/register",
+        "https://e-commerce-azure-six.vercel.app/auth/register",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

@@ -12,7 +12,7 @@ const Order = () => {
 
   const getOrders = async () => {
     try {
-      const orders = await fetch("https://e-commerce-six-pink.vercel.app/orders", {
+      const orders = await fetch("https://e-commerce-azure-six.vercel.app/orders", {
         method: "GET",
         headers: {
           Authorization: `Bearer ${token}`,

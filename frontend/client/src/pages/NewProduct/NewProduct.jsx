@@ -47,7 +47,7 @@ const NewProduct = () => {
     formData.append("title", title);
     formData.append("price", price);
 
-    const response = await fetch(`https://e-commerce-six-pink.vercel.app/newProduct`, {
+    const response = await fetch(`https://e-commerce-azure-six.vercel.app/newProduct`, {
       method: "POST",
       headers: { Authorization: `Bearer ${token}` },
       body: formData,

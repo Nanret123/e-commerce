@@ -44,7 +44,7 @@ const SingleProd = () => {
   };
 
   const addToCart = async () => {
-    const product = await fetch(`https://e-commerce-six-pink.vercel.app/add-to-cart`, {
+    const product = await fetch(`https://e-commerce-azure-six.vercel.app/add-to-cart`, {
       method: "POST",
       headers: {
         Authorization: `Bearer ${token}`,

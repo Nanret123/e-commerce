@@ -35,7 +35,7 @@ const Cart = () => {
   };
 
   const handleDelete = async (id) => {
-    const product = await fetch(`https://e-commerce-six-pink.vercel.app/delete-cart/${id}`, {
+    const product = await fetch(`https://e-commerce-azure-six.vercel.app/delete-cart/${id}`, {
       method: "GET",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -47,7 +47,7 @@ const Cart = () => {
   };
 
   const handleSubmit = async () => {
-    const response = await fetch(`https://e-commerce-six-pink.vercel.app/checkout-success`, {
+    const response = await fetch(`https://e-commerce-azure-six.vercel.app/checkout-success`, {
       method: "GET",
       headers: {
         Authorization: `Bearer ${token}`,
