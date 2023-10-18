@@ -50,7 +50,7 @@ const Navigation = () => {
             </>
             )}
           
-          {user && !user.isAdmin && (
+          {user && user.isAdmin && (
             <>
               <li>
                 <Link to="/admin">Dashboard</Link>

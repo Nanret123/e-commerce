@@ -67,6 +67,7 @@ margin-bottom: 20px;
    .main-container{
       margin-top: 10px;
       flex-direction: column;
+      margin-bottom: 15rem;
    }
    .main-text{
       width: 100%;
