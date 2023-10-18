@@ -26,10 +26,8 @@ const Cart = () => {
         },
       });
       const data = await products.json();
-      console.log(data);
       setCartItems(data.products);
       setTotal(+data.totalSum);
-      console.log(cartItems);
 
     } catch (error) {
       setError({ error: error });
