@@ -24,7 +24,7 @@ const SingleProd = () => {
   };
 
   const getItem = async () => {
-    const product = await fetch(`http://localhost:8000/product/${id}`, {
+    const product = await fetch(`https://e-commerce-azure-six.vercel.app/product/${id}`, {
       method: "GET",
       headers: {
         Authorization: `Bearer ${token}`,
