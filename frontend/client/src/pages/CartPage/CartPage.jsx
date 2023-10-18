@@ -44,6 +44,7 @@ const Cart = () => {
     });
     const cart = await product.json();
     setCartItems(cart);
+    console.log(cartItems);
   };
 
   const handleSubmit = async () => {
@@ -55,8 +56,7 @@ const Cart = () => {
       },
     });
     const result = await response.json();
-    console.log(result);
-  };
+      };
 
   useEffect(() => {
     getCart();
