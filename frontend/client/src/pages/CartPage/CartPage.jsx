@@ -28,6 +28,8 @@ const Cart = () => {
       const data = await products.json();
       setCartItems(data.products);
       setTotal(+data.totalSum);
+      console.log(cartItems);
+
     } catch (error) {
       setError({ error: error });
       navigate("/error");
@@ -44,8 +46,7 @@ const Cart = () => {
     });
     const cart = await product.json();
     setCartItems(cart);
-    console.log(cartItems);
-  };
+      };
 
   const handleSubmit = async () => {
     const response = await fetch(`https://e-commerce-azure-six.vercel.app/checkout-success`, {
