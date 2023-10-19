@@ -26,7 +26,6 @@ const Cart = () => {
         },
       });
       const data = await products.json();
-      console.log(data);
       setCartItems(data.products);
       setTotal(+data.totalSum);
 
@@ -57,6 +56,7 @@ const Cart = () => {
       },
     });
     const result = await response.json();
+    navigate("/home");
       };
 
   useEffect(() => {
