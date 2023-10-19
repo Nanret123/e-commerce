@@ -46,7 +46,9 @@ const Navigation = () => {
               <li>
                 <Link to="/orders">My Orders</Link>
               </li>
-              
+              <li>
+                <Link to="/newProduct">Create Product</Link>
+              </li>
             </>
             )}
           
