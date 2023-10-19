@@ -162,7 +162,6 @@ exports.postOrder = async (req, res, next) => {
       },
       products: products
     });
-    console.log(order);
       await order.save();
       user.cart.items = [];
       await user.save();
@@ -194,7 +193,6 @@ exports.getOrders =async (req, res, next) => {
 try{
 
  const order = await Order.find({"user.userId": req.user.id});
- console.log(order);
  res.status(200).json(order)
 }catch(error){
   res.status(500).json(error);
