@@ -80,7 +80,7 @@ const Cart = () => {
             return (
               <div className="box" key={item._id}>
                 <img
-                  src={`http://localhost:8080/${item.productId.imagePath}`}
+                  src={`https://e-commerce-azure-six.vercel.app/${item.productId.imagePath}`}
                   alt=""
                 />
                 <div className="cart-content">
