@@ -19,13 +19,14 @@ const Cart = () => {
 
   const getCart = async () => {
     try {
-      const products = await fetch("https://e-commerce-six-pink.vercel.app/get-cart", {
+      const products = await fetch("http://localhost:8000/get-cart", {
         method: "GET",
         headers: {
           Authorization: `Bearer ${token}`,
         },
       });
       const data = await products.json();
+      console.log(data);
       setCartItems(data.products);
       setTotal(+data.totalSum);
 
