@@ -19,7 +19,7 @@ const Cart = () => {
 
   const getCart = async () => {
     try {
-      const products = await fetch("http://localhost:8000/get-cart", {
+      const products = await fetch("https://e-commerce-azure-six.vercel.app/get-cart", {
         method: "GET",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -61,7 +61,7 @@ const Cart = () => {
 
   useEffect(() => {
     getCart();
-  }, [cartItems]);
+  }, []);
 
   {if(cartItems <= 0){
     return (
